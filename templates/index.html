@@ -9,6 +9,7 @@
 <body>
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <div class="file-upload">
+        
         <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add
             Image</button>
 
@@ -18,6 +19,7 @@
                 <h3>Drag and drop a file or select add Image</h3>
             </div>
         </div>
+        
         <div class="file-upload-content">
             <img class="file-upload-image" src="#" alt="your image" />
             <div class="image-title-wrap">
@@ -25,6 +27,9 @@
                         class="image-title">Uploaded Image</span></button>
             </div>
         </div>
+        <br>
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Convert
+            Image</button>
     </div>
 </body>
 
@@ -37,6 +42,7 @@
             reader.onload = function (e) {
                 $('.image-upload-wrap').hide();
 
+                //file upload image
                 $('.file-upload-image').attr('src', e.target.result);
                 $('.file-upload-content').show();
 
