@@ -1,6 +1,12 @@
-import os
-from flask import Flask, jsonify, request, render_template, Response
+from os import curdir
+import string,cgi,time
+from flask import Flask, jsonify, request, render_template, Response, json, url_for
 from werkzeug.utils import secure_filename
+from os.path import join as pjoin
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+class StoreHandler(BaseHTTPRequestHandler):
+    store_path = pjoin(curdir, 'store.json')
 
 upload_folder = '/path/to/the/uploads'
 extension = {'png', 'jpg', 'jepg'}
