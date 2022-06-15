@@ -27,8 +27,6 @@ app.config['upload_folder'] = upload_folder
 
 def get():
     test = {
-        #"name": "moj helloworld",
-        #"description": "Converts JSON to HTML tabular representation",dere
     }
     return Response(render_template("index.html", result=test, mimetype="text/html"))
 
